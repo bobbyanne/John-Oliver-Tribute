@@ -1,0 +1,650 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: gray;
+}
+
+a:active {
+    color: black;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+#landing {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: lightgray;
+    background-image: url(http://cdn.thedailybeast.com/content/dailybeast/articles/2014/05/01/john-oliver-on-last-week-tonight-turning-down-cbs-and-nauseating-american-politics/jcr:content/image.img.2000.jpg/1398956932083.cached.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -50px;
+    background-attachment: fixed;
+}
+
+#mobile-nav-links {
+    display: none;
+}
+
+#nav {
+    display: block;
+    width: 100%;
+    height: 125px;
+    border-top: 4px solid #0F141A;
+    overflow: hidden;
+    z-index: 99999;
+    font-family: Josefin Sans;
+}
+
+#nav a {
+    color: #FFF;
+}
+
+#nav a:hover {
+    color: #999;
+    text-shadow: 0px 0 1px #999;
+}
+
+#nav.nav-landing {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(25, 36, 51, 0.55);
+    z-index: 99999;
+    transition-duration: 0.3s;
+}
+
+#nav.nav-fixed {
+    position: fixed;
+    background-color: rgba(25, 36, 51, 0.95);
+    top: 0;
+    height: 75px;
+    transition-duration: 0.3;
+}
+
+#nav.nav-fixed h1 {
+    font-size: 1.8em;
+    top: 10px;
+}
+
+#nav.nav-fixed #description {
+    font-size: 1em;
+    top: 32px;
+    left: -105px;
+}
+
+#nav #name-occupation {
+    height: 100%;
+}
+
+#nav h1 {
+    display: inline-block;
+    position: relative;
+    padding-left: 0.4em;
+    top: 25px;
+    text-align: left;
+    font-size: 3.6em;
+    font-weight: 300;
+    font-weight: thin;
+    color: #fff;
+}
+
+#nav #description {
+    position: relative;
+    top: 55px;
+    left: -195px;
+    font-size: 1.7em;
+    color: crimson;
+}
+
+#nav #nav-links {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    padding-right: 2%;
+    text-transform: uppercase;
+}
+
+#nav-links li {
+    display: inline-block;
+    padding: 1em 2em;
+    border-right: 2px solid grey;
+    color: #fff;
+}
+
+#nav-links li:last-child {
+    border: none;
+}
+
+#mobile-toggle {
+    background-color: #DDD;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50;
+    right: -100px;
+    transform: translateY(-60%);
+}
+
+#mobile-toggle img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#content-main {
+    position: relative;
+}
+
+#bio #bio-intro {
+    background-image: url(../Images/1.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    background-attachment: fixed;
+    border-bottom: 5px solid #213454;
+    position: relative;
+}
+
+#bio a {
+    color: crimson;
+}
+
+#bio a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 1px crimson;
+}
+
+#bio h1 {
+    display: block;
+    width: 80%;
+    margin: 2em auto;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 3em;
+    color: #0F141A;
+    border: 4px solid #253341;
+    text-shadow: 0px 0px 1px #253341;
+    font-weight: 300;
+    font-family: Josefin Sans;
+}
+
+#bio #john-on-tv {
+    width: 50%;
+    height: 635px;
+    display: inline-block;
+    margin-left: 1em;
+}
+
+#bio #john-on-tv img {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://images.metadata.sky.com/pd-image/b7a772c4-8fdb-4e28-be16-66141b9b34d6/background?downsize=1100:*&output-format=jpg);
+    background-repeat: no-repeat;
+    background-position: 2px 85px;
+    background-size: 99% 380px;
+}
+
+#bio #quote {
+    margin-right: -50%;
+    opacity: 0;
+    font-family: sans-serif;
+    line-height: 1.6em;
+    float: right;
+    width: 45%;
+    padding: 1em 2em;
+    margin-top: 15%;
+    font-size: 1.5em;
+    text-align: center;
+    position: relative;
+    text-shadow: -5px 7px 4px #AAA;
+}
+
+#bio #quote:before {
+    font-family: Ubuntu;
+    font-style: italic;
+    color: #333;
+    content: '"';
+    font-size: 6em;
+    position: absolute;
+    left: 0;
+}
+
+#bio #bio-main {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+}
+
+#bio-main #quick-facts {
+    display: inline-block;
+    width: 30%;
+    margin: 1em;
+    padding: 2em;
+    border: 3px solid #213454;
+    box-shadow: -4px 5px 9px #CCC;
+    float: left;
+    overflow: hidden;
+    background-size: contain;
+}
+
+#quick-facts img, h4 {
+    position: relative;
+    left: -50%;
+    transform: translateX(-50%);
+}
+
+#quick-facts img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #186DFF;
+    border-radius: 100%;
+    padding: 10px;
+    margin-bottom: 0.5em;
+}
+
+#quick-facts h4 {
+    text-align: center;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #186DFF;
+}
+
+#quick-facts .quick-fact, .quick-fact-showing {
+    position: relative;
+    top: 0;
+    display: block;
+    text-align: center;
+    line-height: 1.5em;
+    transition-property: 1s;
+}
+
+#quick-facts .quick-fact-showing.key, .quick-fact.key {
+    text-transform: uppercase;
+    color: #213454;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+#quick-facts .quick-fact-showing.value, .quick-fact.value {
+    color: #333;
+}
+
+#quick-facts .quick-fact {
+    opacity: 0;
+    top: -800px;
+}
+
+#quick-facts .quick-fact-showing {
+    display: block;
+    text-align: center;
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+#bio-main .date {
+    color: #323A3A;
+    width: 230px;
+    display: block;
+    margin: 0 auto 0.4em auto;
+    font-size: 2.3em;
+    text-align: center;
+    text-shadow: 0px 1px 2px #CCC;
+}
+
+#timeline {
+    top: 0;
+    width: 66%;
+    display: inline-block;
+}
+
+#timeline li {
+    padding: 1.5em 1em;
+    position: relative;
+    left: 200%;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-family: Josefin Sans;
+}
+
+#timeline img {
+    width: 40%;
+    min-width: 250px;
+    margin: 0 auto 1em auto;
+    display: block;
+    position: relative;
+    left: -150%;
+    opacity: 0;
+}
+
+#timeline img.article_image {
+    display: block;
+    margin: 1.5em auto;
+    width: 60%;
+    position: relative;
+    left: 0px;
+    min-width: 230px;
+    border-radius: 3px;
+    box-shadow: -2px 2px 5px #444;
+    opacity: 1;
+}
+
+#timeline hr {
+    width: 60%;
+    min-width: 250px;
+    display: block;
+    margin: 1px auto 0px auto;
+    color: #333B3B;
+}
+
+#timeline p {
+    line-height: 1.5em;
+    text-align: center;
+    color: #444;
+    font-family: Open Sans;
+}
+
+#timeline p em {
+    background-color: lightyellow;
+    font-style: normal;
+}
+
+#timeline iframe {
+    width: 50%;
+    min-width: 230px;
+    position: relative;
+    left: 50%;
+    margin-top: 2em;
+    transform: translateX(-50%);
+}
+
+#footer {
+    width: 100%;
+    margin-top: 8em;
+    background-color: #333;
+    background-image: url(../Images/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#footer h2, h3 {
+    width: 90%;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+#footer h2 {
+    color: #7DAFFF;
+    padding-top: 1em;
+}
+
+#footer h2:before {
+    content: "{";
+    font-size: 1.5em;
+    position: relative;
+    top: 2px;
+}
+
+#footer h2:after {
+    content: "}";
+    font-size: 1.5em;
+    position: relative;
+    top: 2px;
+}
+
+#footer h3 {
+    padding-top: 1em;
+    color: #ACCCFF;
+}
+
+#footer li {
+    text-align: center;
+    display: block;
+    height: 64px;
+    width: 100%;
+    margin: auto;
+    font-size: 0.85em;
+    margin-bottom: 1em;
+}
+
+#footer li:last-child {
+    margin-bottom: 0;
+}
+
+#footer li img {
+    display: block;
+    margin: auto;
+    top: 25px;
+    width: 64px;
+    height: 54px;
+}
+
+.quick-fact.key:after, .quick-fact-showing.key:after {
+    content: ":"
+}
+
+.quick-fact.value, .quick-fact-showing.value{
+    font-size: 0.95em;
+}
+
+@media only screen and (max-width: 1150px) {
+    #bio #quote {
+        margin-top: 10%;
+    }
+    
+    #bio #john-on-tv {
+        height: 5%;
+    }
+    
+    #bio #john-on-tv img {
+        background-size: 95% 60%;
+        background-position: center 33%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #landing {
+        background-position: center;
+    }
+    
+    #nav {
+        height: 100px;
+    }
+    
+    #nav #nav-links {
+        padding-right: 0;
+    }
+    
+    #nav h1 {
+        font-size: 2.8em;
+        top: 15px;
+    }
+    
+    #nav #description {
+        font-size: 1.3em;
+        top: 40px;
+        left: -155px;
+    }
+    
+    #bio h1 {
+        font-size: 2.5em;
+    }
+    
+    #bio #quote {
+        font-size: 1.4em;
+    }
+    
+    
+    #bio #bio-main {
+        width: 95%;
+    }
+    
+    #timeline {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    #bio #bio-main {
+        width: 100%;
+    }
+    
+    #bio h1 {
+        font-size: 2.3em;
+    }
+    
+    #bio #quote {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #landing {
+    }
+    
+    #nav {
+        background-color: rgba(25, 36, 51, 0.85);
+    }
+    
+    #nav #nav-links {
+        display: none;
+    }
+    
+    #mobile-nav-links {
+        display: block;
+        position: fixed;
+        top: 75px;
+        right: -755px;
+        background-color: #121B29;
+        padding: 1em;
+        z-index: 999;
+        width: 100%;
+    }
+    
+    #mobile-nav-links li {
+        padding: 0.4em;
+        display: block;
+        margin: .5em auto;
+        border-radius: 10px;
+        border: none;
+        border: 2px solid #AAA;
+    }
+    
+    #mobile-nav-links a {
+        width: 86%;
+        display: block;
+        margin: auto;
+    }
+    
+    #mobile-toggle {
+        right: 20px;
+        top: 56%
+    }
+    
+    #bio-intro #quote {
+        font-size: 1.1em;
+    }
+    
+    #bio h1 {
+        font-size: 1.8em;
+    }
+    
+    #bio-main #quick-facts {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        float: none;
+    }
+    
+    #timeline {
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #landing #nav {
+        height: 75px;
+    }
+    
+    #mobile-toggle {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #bio h1 {
+        font-size: 1.4em;
+        width: 90%;
+    }
+    
+    #bio-intro #quote {
+        margin-right: 50%;
+        float: none;
+        width: 90%;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.1em;
+    }
+    
+    #bio #john-on-tv {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+    
+    #bio-intro #quote:before {
+        left: 10px;
+        font-size: 3em;
+    }
+    
+    #bio-main #quick-facts {
+        width: 90%;
+    }
+    
+    #landing h1 {
+        font-size: 2em;
+        display: block;
+    }
+    
+    #landing #description {
+        position: initial;
+        font-size: 1.1em;
+        margin-left: 40px;
+        line-height: 30px;
+    }
+    
+    #footer h2 {
+        width: 99%;
+        font-size: 0.95em;
+    }
+}
