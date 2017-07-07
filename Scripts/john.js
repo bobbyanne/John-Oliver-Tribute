@@ -19,6 +19,25 @@ function animOffPage($object, offset) {
     };
 })(jQuery);
 
+function randomInRange(from, to) {
+    return Math.random() * (to - from) + from;
+
+}
+
+$.fn.animateRotate = function(angle, duration, easing, complete) {
+  var args = $.speed(duration, easing, complete);
+  var step = args.step;
+  return this.each(function(i, e) {
+    args.complete = $.proxy(args.complete, e);
+    args.step = function(now) {
+      $.style(e, 'transform', 'rotate(' + now + 'deg)');
+      if (step) return step.apply(e, arguments);
+    };
+
+    $({deg: 0}).animate({deg: angle}, args);
+  });
+};
+
 
 
 // END GLOBAL //
@@ -51,6 +70,8 @@ $(function () {
         $mobileMenu.css("top", $nav.offset().top - $(window).scrollTop() + $nav.height() + 4 + "px");
     }
 
+    $(document).scrollTop(0);    
+
     $mobileToggle.click(function () {
 
         if (isMenuShowing()) {
@@ -76,7 +97,6 @@ $(function () {
     });
 
     $(window).scroll(function () {
-
         //  If the menu is showing and the user scrolls we need to set the mobile menu
         //  to the bottom of the nav, otherwise it will look really bad.
         if (isMenuShowing()) {
@@ -136,6 +156,9 @@ $(function () {
                     "left": "50%",
                     "opacity": "1"
                 });
+                if ($($timelineItems[0]).hasClass("contains-image")) {
+                    $($timelineItems[0]).children(".article_image").animateRotate(randomInRange(-3, 3));
+                }
                 if ($timelineImgs.length > 0) {
                     $($timelineImgs[0]).animate({
                         "left": "0%",
@@ -151,6 +174,7 @@ $(function () {
         /* END SCROLL */
     });
 
+    /* SCROLL TO STUFF */
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
@@ -185,6 +209,18 @@ $(function () {
                     });
                 }
             }
+            /* END SCROLLING TO STUFF */
         });
+    
+    $("#footer li").hover(function() {
+        $(this).css("background-color", "rgba(43, 50, 100, 0.0");
+        $(this).children("img").css({opacity: 1, "filter": "blur(0)"});
+        $(this).children("p").children("a").css("text-shadow", "0px 0px 3px #000");
+    }, function() {
+        $(this).css("background-color", "rgba(43, 50, 100, 0.6");
+        $(this).children("img").css({opacity: 0.3, "filter": "blur(3px)"});
+        $(this).children("p").children("a").css("text-shadow", "0px 0px 3px #000");
+    });
+
     /* END DOCUMENT READY */
 });
