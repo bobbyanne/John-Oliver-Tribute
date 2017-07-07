@@ -35,7 +35,7 @@ ul {
     overflow: hidden;
     position: relative;
     background-color: lightgray;
-    background-image: url(http://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/c_limit,w_1480/fl_lossy,q_auto/v1492199414/articles/2014/05/01/john-oliver-on-last-week-tonight-turning-down-cbs-and-nauseating-american-politics/140430-stern-oliver-tease_elek37);
+    background-image: url(../Images/oliver_landing.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center -50px;
@@ -44,6 +44,13 @@ ul {
 
 #mobile-nav-links {
     display: none;
+}
+
+#mobile-menu a {
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Josefin Sans;
 }
 
 #nav {
@@ -180,15 +187,24 @@ ul {
 #bio h1 {
     display: block;
     width: 80%;
-    margin: 2em auto;
-    padding: 0.5em;
+    margin: 1.2em auto;
+    padding: 0.11em;
     text-align: center;
     font-size: 3em;
     color: #0F141A;
-    border: 4px solid #253341;
     text-shadow: 0px 0px 1px #253341;
     font-weight: 300;
     font-family: Josefin Sans;
+}
+
+.divider {
+    width: 60%;
+    min-width: 200px;
+    height: 4px;
+    background-color: #253341;
+    display: block;
+    margin: 0.5em auto 0 auto;
+    border-radius: 15px;
 }
 
 #bio #john-on-tv {
@@ -244,12 +260,19 @@ ul {
     display: inline-block;
     width: 30%;
     margin: 1em;
-    padding: 2em;
-    border: 3px solid #213454;
-    box-shadow: -4px 5px 9px #CCC;
+    border: 5px solid #213454;
+    box-shadow: -2px 4px 3px #BBB;
     float: left;
     overflow: hidden;
     background-size: contain;
+    background-color: #EEE;
+}
+
+#quick-facts #wrapper {
+    border: 3px solid #314474;
+    margin: 4px;
+    padding: 2em;
+    background-color: #FFF;
 }
 
 #quick-facts img, h4 {
@@ -262,9 +285,9 @@ ul {
     display: block;
     width: 70px;
     height: 70px;
-    background-color: #186DFF;
+    background-color: #213454;
     border-radius: 100%;
-    padding: 10px;
+    padding: 2px;
     margin-bottom: 0.5em;
 }
 
@@ -272,7 +295,8 @@ ul {
     text-align: center;
     font-size: 1.1em;
     text-transform: uppercase;
-    color: #186DFF;
+    font-weight: bold;
+    color: #213455;
 }
 
 #quick-facts .quick-fact, .quick-fact-showing {
@@ -287,8 +311,9 @@ ul {
 #quick-facts .quick-fact-showing.key, .quick-fact.key {
     text-transform: uppercase;
     color: #213454;
-    font-weight: bold;
+    font-weight: thin;
     margin-top: 1em;
+    letter-spacing: 0.06em;
 }
 
 #quick-facts .quick-fact-showing.value, .quick-fact.value {
@@ -349,8 +374,8 @@ ul {
     position: relative;
     left: 0px;
     min-width: 230px;
-    border-radius: 3px;
-    box-shadow: -2px 2px 5px #444;
+    border: 4px solid #FFF;
+    box-shadow: 1px 2px 5px #666;
     opacity: 1;
 }
 
@@ -423,26 +448,54 @@ ul {
     color: #ACCCFF;
 }
 
-#footer li {
-    text-align: center;
-    display: block;
-    height: 64px;
+#footer ul {
+    position: relative;
+    margin: 2.5em auto 0 auto;
     width: 100%;
-    margin: auto;
-    font-size: 0.85em;
-    margin-bottom: 1em;
+    display: block;
+    padding-bottom: 1em;
 }
 
-#footer li:last-child {
-    margin-bottom: 0;
+#footer li {
+    min-width: 160px;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+    height: 175px;
+    display: inline-block;
+    border: 3px solid #DDD;
+    width: 20%;
+    margin-left: 3.7%;
+    font-size: 0.70em;
+    background-color: rgba(43, 50, 100, 0.6);
+    background-repeat: no-repeat;
 }
 
 #footer li img {
-    display: block;
-    margin: auto;
-    top: 25px;
-    width: 64px;
-    height: 54px;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    filter: blur(3px);
+    z-index: 0;
+}
+
+#footer li:nth-of-type(2) img {
+    width: 50%;
+}
+
+#footer p {
+    width: 91%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #FFF;
+    z-index: 1;
+}
+
+#footer a {
+    color: aquamarine;
 }
 
 .quick-fact.key:after, .quick-fact-showing.key:after {
@@ -508,6 +561,10 @@ ul {
     #timeline {
         width: 65%;
     }
+    
+    #footer ul {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -522,6 +579,15 @@ ul {
     
     #bio #quote {
         font-size: 1.2em;
+    }
+    
+    #footer ul {
+        width: 325px;;
+    }
+    
+    #footer li {
+        height: 150px;
+        margin: 5px 0 0 0;
     }
 }
 
@@ -555,6 +621,7 @@ ul {
         border-radius: 10px;
         border: none;
         border: 2px solid #AAA;
+        background-color: #121B30;
     }
     
     #mobile-nav-links a {
@@ -573,7 +640,7 @@ ul {
     }
     
     #bio h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
     
     #bio-main #quick-facts {
@@ -601,7 +668,6 @@ ul {
     }
     
     #bio h1 {
-        font-size: 1.4em;
         width: 90%;
     }
     
@@ -612,6 +678,7 @@ ul {
         display: block;
         position: relative;
         left: 50%;
+        top: -20px;
         transform: translateX(-50%);
         font-size: 1.1em;
     }
@@ -646,5 +713,15 @@ ul {
     #footer h2 {
         width: 99%;
         font-size: 0.95em;
+    }
+    
+    #footer ul {
+        width: 265px;
+    }
+    
+    #footer li {
+        min-width: 130px;
+        height: 130px;
+        font-size: 0.50em;
     }
 }
