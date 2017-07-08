@@ -173,7 +173,6 @@ ul {
       -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
     background-size: cover;
     background-repeat: repeat-y;
     background-position: center;
@@ -664,11 +663,11 @@ ul {
     }
     
     #landing {
-        background-attachment: none;
+        background-attachment: initial;
     }
     
     #bio #bio-intro {
-        background-attachment: none;
+        background-attachment: initial;
     }
 }
 
