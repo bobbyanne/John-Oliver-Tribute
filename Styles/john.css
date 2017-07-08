@@ -23,12 +23,6 @@ a:active {
 body {
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
-    width: 100vw;
-}
-
-#content-main {
-    width: 100vw;
-    overflow: hidden;
 }
 
 ul {
@@ -364,6 +358,8 @@ ul {
 #timeline li {
     padding: 1.5em 1em;
     position: relative;
+    margin-left: 100%;
+    min-width: 60%;
     opacity: 0;
     font-family: Josefin Sans;
 }
@@ -372,10 +368,7 @@ ul {
     width: 40%;
     min-width: 250px;
     display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: -150%;
+    margin: 0 auto;
     opacity: 0;
 }
 
@@ -404,11 +397,6 @@ ul {
     text-align: center;
     color: #444;
     font-family: Open Sans;
-}
-
-#timeline p em {
-    background-color: lightyellow;
-    font-style: normal;
 }
 
 #timeline iframe {
