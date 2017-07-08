@@ -42,7 +42,7 @@ ul {
   background-size: cover;
     background-repeat: no-repeat;
     background-position: center -50px;
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 
 #mobile-nav-links {
@@ -591,6 +591,10 @@ ul {
     #footer li {
         height: 150px;
         margin: 5px 0 0 0;
+    }
+    
+    #landing {
+        background-attachment: scroll;
     }
 }
 
