@@ -36,10 +36,12 @@ ul {
     position: relative;
     background-color: lightgray;
     background-image: url(../Images/oliver_landing.jpeg);
-  -webkit-background-size: auto 100%;
-  -moz-background-size: auto 100%;
-  -o-background-size: auto 100%;
-  background-size: auto 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  overflow: hidden;
     background-repeat: no-repeat;
     background-position: center -50px;
     background-attachment: fixed;
