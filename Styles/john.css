@@ -357,7 +357,7 @@ ul {
 
 #timeline li {
     padding: 1.5em 1em;
-    margin-left: 100%;
+    margin-left: 0%;
     opacity: 0;
     font-family: Josefin Sans;
 }
