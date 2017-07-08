@@ -170,6 +170,10 @@ ul {
 
 #bio #bio-intro {
     background-image: url(../Images/1.jpg);
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     background-size: cover;
     background-repeat: repeat-y;
     background-position: center;
