@@ -26,6 +26,11 @@ body {
     width: 100vw;
 }
 
+#content-main {
+    width: 100vw;
+    overflow: hidden;
+}
+
 ul {
     list-style: none;
 }
