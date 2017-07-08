@@ -136,7 +136,7 @@ $(function () {
                     var time = 100;
                     $quickFacts.each(function () {
                         //  I use queue here, so we can take advantage of the delay function
-                        $(this).delay(time += 150).queue(function () {
+                        $(this).delay(time += 100).queue(function () {
                             $(this).removeClass("quick-fact").addClass("quick-fact-showing");
                         });
                     });
