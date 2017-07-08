@@ -42,6 +42,7 @@ ul {
   background-size: cover;
     background-repeat: no-repeat;
     background-position: center -50px;
+    background-attachment: fixed;
 }
 
 #mobile-nav-links {
@@ -656,6 +657,14 @@ ul {
         width: 90%;
         display: block;
         margin: auto;
+    }
+    
+    #landing {
+        background-attachment: none;
+    }
+    
+    #bio #bio-intro {
+        background-attachment: none;
     }
 }
 
