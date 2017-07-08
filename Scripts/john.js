@@ -125,13 +125,13 @@ $(function () {
                 var $factsHeader = $quickFactsParent.children("h4");
 
                 $runningMan.animate({
-                    "left": "50%"
+                    "margin-left": "0%"
                 });
 
                 // So after the header goes to is position, we want each of the 
                 // facts to scroll down it's parent like a waterfall.
                 $factsHeader.animate({
-                    "left": "50%"
+                    "margin-left": "0%"
                 }, 700, "easeOutElastic", function () {
                     var time = 100;
                     $quickFacts.each(function () {
