@@ -39,12 +39,14 @@ ul {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 100vh 100vw;
-  min-height: 100%;
-  overflow: hidden;
+  background-size: cover;
     background-repeat: no-repeat;
     background-position: center -50px;
     background-attachment: fixed;
+    
+    @media (max-width: @iphone-screen) {
+        background-attachment: scroll;
+    }
 }
 
 #mobile-nav-links {
