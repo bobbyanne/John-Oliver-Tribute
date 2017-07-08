@@ -42,11 +42,7 @@ ul {
   background-size: cover;
     background-repeat: no-repeat;
     background-position: center -50px;
-    background-attachment: fixed;
-    
-    @media (max-width: @iphone-screen) {
-        background-attachment: scroll;
-    }
+    background-attachment: scroll;
 }
 
 #mobile-nav-links {
