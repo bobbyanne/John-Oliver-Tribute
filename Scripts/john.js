@@ -136,7 +136,7 @@ $(function () {
                     var time = 100;
                     $quickFacts.each(function () {
                         //  I use queue here, so we can take advantage of the delay function
-                        $(this).delay(time += 100).queue(function () {
+                        $(this).delay(time += 50).queue(function () {
                             $(this).removeClass("quick-fact").addClass("quick-fact-showing");
                         });
                     });
@@ -158,12 +158,13 @@ $(function () {
                     "opacity": "1"
                 });
                 if ($($timelineItems[0]).hasClass("contains-image")) {
-                    $($timelineItems[0]).children(".article_image").animateRotate(randomInRange(-3, 3));
+                    $($timelineItems[0]).children(".article_image").animate({"width": "60%"}, 1000, "easeOutElastic").animateRotate(randomInRange(-3, 3), 1000);
                 }
                 if ($timelineImgs.length > 0) {
                     $($timelineImgs[0]).animate({
-                        "opacity": "1"
-                    });
+                        "opacity": "1",
+                        width: "40%"
+                    }, 1000, "easeOutElastic");
                 }
                 $timelineItems.shift();
                 $timelineImgs.shift();
