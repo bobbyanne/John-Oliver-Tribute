@@ -155,7 +155,7 @@ $(function () {
         if ($timelineItems.length > 0) {
             if ($timelineItems.offset().top - $(window).scrollTop() < $(window).height() / 1.5) {
                 $($timelineItems[0]).animate({
-                    "left": "50%",
+                    "margin-left": "0%",
                     "opacity": "1"
                 });
                 if ($($timelineItems[0]).hasClass("contains-image")) {
