@@ -163,7 +163,6 @@ $(function () {
                 }
                 if ($timelineImgs.length > 0) {
                     $($timelineImgs[0]).animate({
-                        "margin-left": "0%",
                         "opacity": "1"
                     });
                 }
