@@ -230,7 +230,7 @@ ul {
 }
 
 #bio #quote {
-    margin-right: -50%;
+    margin-left: -50%;
     opacity: 0;
     font-family: sans-serif;
     line-height: 1.6em;
