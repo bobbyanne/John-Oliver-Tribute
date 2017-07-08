@@ -70,7 +70,9 @@ $(function () {
         $mobileMenu.css("top", $nav.offset().top - $(window).scrollTop() + $nav.height() + 4 + "px");
     }
 
-    $(document).scrollTop(0);    
+    $(document).scrollTop(0);   
+
+    window.scrollBy(0, 1); 
 
     $mobileToggle.click(function () {
 
@@ -161,7 +163,7 @@ $(function () {
                 }
                 if ($timelineImgs.length > 0) {
                     $($timelineImgs[0]).animate({
-                        "left": "0%",
+                        "margin-left": "0%",
                         "opacity": "1"
                     });
                 }
