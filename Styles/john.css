@@ -364,9 +364,6 @@ ul {
 #timeline li {
     padding: 1.5em 1em;
     position: relative;
-    left: 50%;
-    margin-left: 100%;
-    transform: translateX(-50%);
     opacity: 0;
     font-family: Josefin Sans;
 }
@@ -374,7 +371,6 @@ ul {
 #timeline img {
     width: 40%;
     min-width: 250px;
-    margin: 0 auto 1em auto;
     display: block;
     position: relative;
     left: 50%;
